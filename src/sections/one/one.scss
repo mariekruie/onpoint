@@ -1,0 +1,177 @@
+.one{
+    position: relative;
+    height: 100vh;
+  width: 100vw;
+    background-image: url('../../assets/one/bg.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    // z-index: -100;
+    transition: margin 1s ease;
+
+    &.margin-left{
+        margin-left: -100vw;
+    }
+    & img{
+        position: absolute;
+    }
+
+    & .wrapper{
+        padding-top: 162px;
+    }
+
+    &__hello{
+        font-family: 'DIN Pro';
+        font-size: 26px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding-left: 3px;
+        margin-bottom: 17px;
+        color: #242424;
+    }
+
+    &__title{
+        position: relative;
+        font-family: 'gilroy-light';
+        font-size: 110px;
+        letter-spacing: 5.4px;
+        line-height: 117px;
+        text-transform: uppercase;
+        color: #171717;
+        z-index: 100;
+        & span{
+            font-family: 'gilroy-extrabold';
+        }
+    }
+
+    &__btn{
+        display: inline-block;
+        width: 288px;
+        height: 79px;
+        bottom: 223px;
+        right: 108px;
+        z-index: 300;
+        cursor: pointer;
+    }
+
+    &__sperm-big{
+        width: 59%;
+        right: -13px;
+        top: 20%;
+        z-index: 200;
+    }
+    &__sperm-small{
+        width: 27%;
+        bottom: 49px;
+    }
+    &__bakti1{
+        width: 7%;
+        left: 22px;
+        bottom: 193px;
+        animation: top-to-down 5s ease infinite;
+    }
+    &__bakti2{
+        width: 11%;
+        right: 50px;
+        top: 199px;
+        transform: rotate(205deg);
+        animation: round 5s ease infinite;
+    }
+    &__bakti3{
+        width: 12%;
+        top: 75px;
+    }
+    &__bakti4{
+        width: 6%;
+        top: 62px;
+        right: 217px;
+        animation: slow 5s ease infinite;
+    }
+    &__bakti5{
+        top: 32px;
+        right: 33px;
+        opacity: 0.7;
+        width: 7%;
+    }
+    &__bakti6{
+        width: 8%;
+        opacity: 0.5;
+        bottom: 8%;
+        left: 34%;
+    }
+    &__bakti7{
+        width: 22%;
+        bottom: 0;
+        right: 25%;
+        animation: enlarge 5s ease infinite;
+    }
+}
+
+@keyframes enlarge{
+    0%{
+        width: 22%;
+    }
+    50%{
+        width: 25%;
+    }
+    100%{
+        width: 22%;
+    }
+}
+
+@keyframes top-to-down{
+    0%{
+        left: 22px;
+        bottom: 193px;
+    }
+    50%{
+        left: 32px;
+        bottom: 173px;
+    }
+    100%{
+        left: 22px;
+        bottom: 193px;
+    }
+}
+
+@keyframes round {
+    0%{
+        right: 50px;
+        top: 199px;
+    }
+    30%{
+        right: 70px;
+        top: 157px;
+        transform: rotate(195deg);
+    }
+    50%{
+        right: 60px;
+        top: 155px;
+        transform: rotate(193deg);
+    }
+    80%{
+        // right: 49px;
+        //  top: 199px;
+         transform: rotate(195deg);
+    }
+    100%{
+        // right: 50px;
+        // top: 199px;
+        transform: rotate(205deg);
+    }
+}
+
+@keyframes slow {
+    0%{
+        top: 62px;
+        right: 217px;
+    }
+    50%{
+        top: 72px;
+        right: 210px;
+    }
+    100%{
+        top: 62px;
+        right: 217px;
+    }
+}

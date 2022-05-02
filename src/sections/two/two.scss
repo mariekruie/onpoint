@@ -1,0 +1,170 @@
+.two{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../../assets/two/bg.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transition: margin 1s ease;
+
+    &.margin-left{
+        margin-left: -100vw;
+    }
+
+
+    & img{
+        position: absolute;
+        opacity: 0;
+    }
+
+    & .wrapper{
+        padding-top: 131px;
+        position: relative;
+        z-index: 1000;
+    }
+
+    &__title{
+        font-family: 'DIN Pro';
+        font-size: 26px;
+        letter-spacing: 2.4px;
+        text-transform: uppercase;
+        padding-left: 3px;
+        margin-bottom: 45px;
+        color: #242424;
+    }
+
+    &__text{
+        width: 822px;
+        height: 444px;
+        margin-left: 8px;
+        padding: 24px 94px 20px 30px;
+        background-color: #fff;
+        font-family: "DIN Pro";
+        font-size: 22px;
+        line-height: 1.37;
+        border-radius: 40px;
+        box-shadow: 0px 0px 100px 41px rgba(20, 60, 90, 0.2), 1px -38px 52px -7px rgba(255, 255, 255, 1) inset;
+        border-bottom: 14px solid #fff;
+        border-top: 10px solid #fff;
+        overflow-y: auto;
+        overflow-x: hidden;
+        direction: rtl;
+       
+       & p{
+        margin-left: 27px;
+        direction:ltr;
+       }
+
+        &::-webkit-scrollbar {
+            width: 20px;
+            margin-right: 20px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: rgb(0, 0, 0);
+            border-radius: 20px;
+            border: solid 8px transparent;
+            box-sizing: border-box;
+            background-clip: content-box;
+        }
+        &::-webkit-scrollbar-thumb {
+            background:#cf578d;
+            box-shadow: -9px -3px 7px -6px rgb(255 255 255) inset, 8px 3px 4px 0px rgb(142 64 106) inset;
+            border-radius: 100px;
+        }
+    }
+
+    &__sperm1{
+        width: 14%;
+        bottom: 166px;
+        right: 0;
+        animation: sperm1 2s ease-in infinite;
+    }
+    &__sperm2{
+        width: 56%;
+        top: 96px;
+        right: -133px;
+        animation: sperm2 2s ease-in 0.2s infinite;
+    }
+    &__sperm3{
+        width: 13%;
+        bottom: 272px;
+        right: 0;
+        animation: sperm3 2s ease-in infinite;
+    }
+    &__sperm4{
+        width: 64%;
+        top: 100px;
+        right: 0;
+        animation: slide-in 2s ease-in infinite;
+    }
+    &__sperm5{
+        width: 25%;
+        top: 74px;
+        right: 58px;
+        animation: slide-in 2s ease-in 0.5s infinite;
+    }
+}
+
+@keyframes slide-in {
+    0%{
+        opacity: 0;
+        padding: 35px;
+        right:-32px;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity:1;
+        padding: 0;
+        right:0;
+    }
+}
+@keyframes sperm1 {
+    0%{
+        opacity: 0;
+        right:-32px;
+        bottom: 152px;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity:1;
+        bottom: 166px;
+        right: 0;
+    }
+}
+@keyframes sperm2 {
+    0%{
+        opacity: 0;
+        width: 53%;
+        top: 116px;
+        right: -153px;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity:1;
+        width: 56%;
+        top: 96px;
+        right: -133px;
+    }
+}
+@keyframes sperm3 {
+    0%{
+        opacity: 0;
+        right:-32px;
+        bottom: 252px;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity:1;
+        right:0;
+        bottom: 272px;
+    }
+}

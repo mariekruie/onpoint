@@ -1,0 +1,114 @@
+.popup{
+    position: absolute;
+    background: rgba(58, 91, 118,0.7);
+    top: 0;
+    bottom:0;
+    left: 0;
+    right:0;
+    transition: all 1s ease;
+
+    & img{
+        position: absolute;
+    }
+
+    &__wrapper{
+        position: relative;
+        width: 78%;
+        height: 74%;
+        margin-top: 122px;
+        margin-left: 165px;
+        padding-right: 69px;
+        padding-left: 181px;
+        padding-top: 40px;
+        background: rgb(255, 255, 255);
+        border-radius: 39px;
+        -webkit-box-shadow: 0px 0px 100px 41px rgba(20, 60, 90, 0.09);
+        -moz-box-shadow: 0px 0px 100px 41px rgba(20, 60, 90, 0.09);
+        box-shadow: 0px 0px 100px 41px rgba(20, 60, 90, 0.09);
+
+        & img{
+            width: 34px;
+            top: 31px;
+            right: 32px;
+            cursor: pointer;
+        }
+    }
+
+    &__heading{
+        &-subtitle{
+            font-family: "DIN Pro";
+            font-size: 26px;
+            letter-spacing: 2.6px;
+            text-transform: uppercase;
+            padding-left: 5px;
+            color: #242424;
+        }
+        &-title{
+            font-family: "gilroy-regular";
+            font-size: 94px;
+            letter-spacing: 12px;
+            text-transform: uppercase;
+            color: #171717;
+            & span{
+                font-family: 'gilroy-extrabold';
+            }
+        }
+    }
+
+    &__content{
+        padding: 15px 0 0 6px;
+        font-size: 25px;
+    
+        &-first, &-second{
+            & > div{
+                font-family: 'gilroy-extrabold';
+                color:#8cc9e8;
+                margin-bottom: 6px;
+            }
+            & > p{
+                font-family: "DIN Pro";
+                line-height: 30px;
+                margin-bottom: 16px;
+            }
+        }
+        &-pagination{
+            display: flex;
+            margin-top: 44px;
+            align-items: center;
+            gap:10px;
+
+            & > button{
+                width: 11px;
+                height: 31px;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: center;
+                background-color: transparent;  
+                border: none;
+                cursor: pointer;
+            }
+
+            & > span{
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: 2px solid black;
+
+                &.active{
+                    border-color: #fc6da9;
+                    background-color: #fc6da9; 
+                }
+            }
+        }
+
+        &-btn1{
+            background-image: url('../../assets/popup/btn_prev.png'); 
+            margin-right: 8px;
+        }
+
+        &-btn2{ 
+            background-image: url('../../assets/popup/btn_next.png'); 
+            margin-left: 11px; 
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@import './assets/fonts/fonts.scss';
+
+.app{
+    position: relative;
+
+    & .container{
+        display: flex;
+        flex-direction: row;
+        width: 300vw;
+    }
+
+    &__header{
+        position: absolute;
+        top: 26px;
+        left: 65px;
+        z-index: 1000;
+        display: flex;
+
+        & img:nth-child(1){
+            width: 23px;
+            height: 20px;
+            cursor: pointer;
+        }
+        & img:nth-child(2){
+            width: 105px;
+            padding: 6px 0 7px 24px;
+            margin-left: 25px;
+            border-left: 2px solid #242424;
+        }
+    }
+
+    &__logo{
+        position: absolute;
+        width: 59px;
+        bottom: 13px;
+        left: 68px;
+        z-index: 1000;
+    }
+}
