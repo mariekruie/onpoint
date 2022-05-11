@@ -37,3 +37,12 @@
         z-index: 1000;
     }
 }
+
+@media (max-width: 599px){
+    .app__header{
+        left: 1rem;
+    }
+    .app__logo{
+        left:1rem;
+    }
+}

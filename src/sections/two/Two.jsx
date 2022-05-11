@@ -65,7 +65,7 @@ export default function Two({margin, setMarginOne, setMarginTwo}) {
             
         </div>
       </div>
-        <img className='two__sperm1' src={sperm1} alt='sperm_1'/>
+        <img className='two__sperm1' style={ isVisible ? { animation:'sperm1 2s ease-in infinite'} : {}} src={sperm1} alt='sperm_1'/>
         <img className='two__sperm2' src={sperm2} alt='sperm_2'/>
         <img className='two__sperm3' src={sperm3} alt='sperm_3'/>
         <img className='two__sperm4' src={sperm4} alt='sperm_4'/>

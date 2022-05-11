@@ -1,12 +1,11 @@
 .one{
     position: relative;
     height: 100vh;
-  width: 100vw;
+    width: 100vw;
     background-image: url('../../assets/one/bg.png');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
-    // z-index: -100;
     transition: margin 1s ease;
 
     &.margin-left{
@@ -175,3 +174,31 @@
         right: 217px;
     }
 }
+
+@media (max-width: 599px) { 
+    .one{
+        background-size: cover;
+    }
+    .one__title{
+        word-break: break-word;
+        font-size: 60px;
+        line-height: normal;
+    }
+    .one__hello {
+        margin-bottom: 81px;
+    }
+    .one__btn {
+        width: 250px;
+        height: 64px;
+        bottom: 15%;
+        right: 50%;
+        transform: translateX(50%);
+    }
+ }
+
+@media (min-width: 1200px) { 
+    .one__bakti3 {
+        width: 9%;
+        top: 54px;
+    }
+ }

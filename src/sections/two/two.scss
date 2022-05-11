@@ -78,7 +78,7 @@
         width: 14%;
         bottom: 166px;
         right: 0;
-        animation: sperm1 2s ease-in infinite;
+        // animation: sperm1 2s ease-in infinite;
     }
     &__sperm2{
         width: 56%;
@@ -166,5 +166,17 @@
         opacity:1;
         right:0;
         bottom: 272px;
+    }
+}
+
+
+@media (max-width: 599px){
+    .two{
+        background-size: cover;
+    }
+    .two__text{
+        width: 95%;
+        height: 444px;
+        padding: 1rem;
     }
 }

@@ -14,3 +14,11 @@ html, body {
     width: 90%;
     margin-left: 65px;
 }
+
+@media (max-width: 599px) { 
+  .wrapper{
+    width: 100%;
+    margin-left: 0;
+    padding: 1rem 1rem;
+  }
+}
