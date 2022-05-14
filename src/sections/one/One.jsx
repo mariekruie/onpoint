@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-
+import React from 'react';
+import { useTouchEventContext } from '../../context';
 import btn from '../../assets/one/btn.png';
 import spermBig from '../../assets/one/sperm_big.png';
 import spermSmall from '../../assets/one/sperm_small.png';
@@ -15,16 +15,8 @@ import './one.scss';
 
 
 export default function One({margin, setMarginOne}) {
-  const [touchStart, setTouchStart] = useState(0);
-  const [touchEnd, setTouchEnd] = useState(0);
 
-  function handleTouchStart(e) {
-    setTouchStart(e.targetTouches[0].clientX);
-  };
-
-  function handleTouchMove(e) {
-    setTouchEnd(e.targetTouches[0].clientX);
-  };
+  const {touchStart, touchEnd, handleTouchStart, handleTouchMove} = useTouchEventContext();
 
   function handleTouchEnd() {
       if (touchStart - touchEnd > 150) {

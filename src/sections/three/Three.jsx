@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import { useTouchEventContext } from '../../context';
 import Popup from '../../components/popup/Popup';
 import bottle from '../../assets/three/bottle.png';
 import icon1 from '../../assets/three/icon1.png';
@@ -17,17 +17,8 @@ import bubble8 from '../../assets/three/bubble_8.png';
 import './three.scss';
 
 export default function Three({setMarginTwo}) {
-    const [touchStart, setTouchStart] = useState(0);
-    const [touchEnd, setTouchEnd] = useState(0);
+    const {touchStart, touchEnd, handleTouchStart, handleTouchMove} = useTouchEventContext();
     const [showPopup, setShowPopup] = useState(false);
-  
-    function handleTouchStart(e) {
-      setTouchStart(e.targetTouches[0].clientX);
-    };
-  
-    function handleTouchMove(e) {
-      setTouchEnd(e.targetTouches[0].clientX);
-    };
   
     function handleTouchEnd() {
       if (touchStart - touchEnd < -150 ) {
