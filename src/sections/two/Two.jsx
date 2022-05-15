@@ -13,12 +13,12 @@ export default function Two({margin, setMarginOne, setMarginTwo}) {
   const {touchStart, touchEnd, handleTouchStart, handleTouchMove} = useTouchEventContext();
 
   function handleTouchEnd() {
-      if (touchStart - touchEnd > 150) {
-        setMarginTwo('margin-left');
-      };
-      if (touchStart - touchEnd < -150) {
-        setMarginOne('');
-      };
+    if ((touchStart - touchEnd) > 150 && touchEnd !== 0) {
+      setMarginTwo('margin-left');
+    };
+    if ((touchStart - touchEnd) < -150 && touchEnd !== 0) {
+      setMarginOne('');
+    };
   };
 
   return (

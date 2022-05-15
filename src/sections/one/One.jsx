@@ -19,9 +19,9 @@ export default function One({margin, setMarginOne}) {
   const {touchStart, touchEnd, handleTouchStart, handleTouchMove} = useTouchEventContext();
 
   function handleTouchEnd() {
-      if (touchStart - touchEnd > 150) {
-        setMarginOne('margin-left');
-      };
+    if ((touchStart - touchEnd) > 150 && touchEnd !== 0) {
+      setMarginOne('margin-left');
+    };
   };
 
   function handleClick () {
@@ -34,7 +34,7 @@ export default function One({margin, setMarginOne}) {
         <div className='one__hello'>привет,</div>
         <div className='one__title'>это <span>не</span> коммерческое задание</div>
       </div>
-        <img className='one__btn'onClick={handleClick} src={btn} alt='button'/>
+        <img className='one__btn' onClick={handleClick} src={btn} alt='button'/>
         <img className='one__sperm-big' src={spermBig} alt='sperm-big'/>
         <img className='one__sperm-small' src={spermSmall} alt='sperm-small'/>
         <img className='one__bakti1' src={bakti1} alt='bakti1'/>

@@ -58,19 +58,7 @@
             box-shadow: 0px 0px 100px 41px rgba(20, 60, 90, 0.2);
             z-index: -1;
             border-bottom: 14px solid rgb(255, 255, 255);
-            // border-top: 14px solid rgb(6, 99, 6);
         }
-        // &::after{
-        //     content: '';
-        //     position: fixed;
-        //     width: 775px;
-        //     height: 444px;
-        //     top:0;
-        //     background-color: transparent;
-        //     border-radius: 40px;
-        //     border-bottom: 14px solid rgb(244, 21, 21);
-        //     border-top: 14px solid rgb(251, 15, 15);
-        // }
        
         &-container{
             position: relative;
@@ -105,7 +93,7 @@
         width: 14%;
         bottom: 166px;
         right: 0;
-        // animation: sperm1 2s ease-in infinite;
+        animation: sperm1 2s ease-in infinite;
     }
     &__sperm2{
         width: 56%;

@@ -21,7 +21,7 @@ export default function Three({setMarginTwo}) {
     const [showPopup, setShowPopup] = useState(false);
   
     function handleTouchEnd() {
-      if (touchStart - touchEnd < -150 ) {
+      if ((touchStart - touchEnd) < -150 && touchEnd !== 0) {
         setMarginTwo('');
         setShowPopup(false);
       };

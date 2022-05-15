@@ -1,7 +1,7 @@
 import { createContext, useState, useContext } from 'react';
 
 
-// custom hook for using the context
+// custom hook for using the touch event context
 
 const touchEventContext = createContext();
 
@@ -17,15 +17,15 @@ export function TouchEventContextProvider({children}){
  
     function handleTouchStart(e) {
         setTouchStart(e.targetTouches[0].clientX);
+        setTouchEnd(0);
     };
     
     function handleTouchMove(e) {
         setTouchEnd(e.targetTouches[0].clientX);
     };
-
   
     return(
-        <touchEventContext.Provider value={{touchStart, touchEnd, handleTouchStart,handleTouchMove }}>
+        <touchEventContext.Provider value={{touchStart, touchEnd, handleTouchStart, handleTouchMove}}>
             {children}
         </touchEventContext.Provider>
     )
