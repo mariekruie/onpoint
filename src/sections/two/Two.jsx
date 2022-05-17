@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { useTouchEventContext } from '../../context';
 import sperm1 from '../../assets/two/sperm_1.png';
 import sperm2 from '../../assets/two/sperm_2.png';
@@ -8,8 +8,7 @@ import sperm5 from '../../assets/two/sperm_5.png';
 
 import './two.scss';
 
-export default function Two({margin, setMarginOne, setMarginTwo}) {
-
+const Two = forwardRef(({margin, setMarginOne, setMarginTwo, showAnimation}, ref) => {
   const {touchStart, touchEnd, handleTouchStart, handleTouchMove} = useTouchEventContext();
 
   function handleTouchEnd() {
@@ -22,7 +21,7 @@ export default function Two({margin, setMarginOne, setMarginTwo}) {
   };
 
   return (
-    <div className={`two ${margin}`} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
+    <div className={`two ${margin}`} ref={ref} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
       <div className='wrapper'>
         <div className='two__title'>текст <br/> сообщения</div>
 
@@ -38,11 +37,13 @@ export default function Two({margin, setMarginOne, setMarginTwo}) {
           </div>  
         </div>
       </div>
-        <img className='two__sperm1' src={sperm1} alt='sperm_1'/>
-        <img className='two__sperm2' src={sperm2} alt='sperm_2'/>
-        <img className='two__sperm3' src={sperm3} alt='sperm_3'/>
-        <img className='two__sperm4' src={sperm4} alt='sperm_4'/>
-        <img className='two__sperm5' src={sperm5} alt='sperm_5'/>
+        <img className={`${showAnimation ? 'two__sperm1' : ''}`} src={sperm1} alt='sperm_1'/>
+        <img className={`${showAnimation ? 'two__sperm2' : ''}`} src={sperm2} alt='sperm_2'/>
+        <img className={`${showAnimation ? 'two__sperm3' : ''}`} src={sperm3} alt='sperm_3'/>
+        <img className={`${showAnimation ? 'two__sperm4' : ''}`} src={sperm4} alt='sperm_4'/>
+        <img className={`${showAnimation ? 'two__sperm5' : ''}`} src={sperm5} alt='sperm_5'/>
     </div>
   );
-};
+})
+
+export default Two;

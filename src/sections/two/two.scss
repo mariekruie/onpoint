@@ -1,4 +1,5 @@
 .two{
+    border: 1px solid red;
     position: relative;
     height: 100vh;
     width: 100vw;
@@ -93,31 +94,31 @@
         width: 14%;
         bottom: 166px;
         right: 0;
-        animation: sperm1 2s ease-in infinite;
+        animation: sperm1 2s ease-in forwards;
     }
     &__sperm2{
         width: 56%;
         top: 96px;
         right: -133px;
-        animation: sperm2 2s ease-in 0.2s infinite;
+        animation: sperm2 2s ease-in 0.2s forwards;
     }
     &__sperm3{
         width: 13%;
         bottom: 272px;
         right: 0;
-        animation: sperm3 2s ease-in infinite;
+        animation: sperm3 2s ease-in forwards;
     }
     &__sperm4{
         width: 64%;
         top: 100px;
         right: 0;
-        animation: slide-in 2s ease-in infinite;
+        animation: slide-in 2s ease-in forwards;
     }
     &__sperm5{
         width: 25%;
         top: 74px;
         right: 58px;
-        animation: slide-in 2s ease-in 0.5s infinite;
+        animation: slide-in 2s ease-in 0.5s forwards;
     }
 }
 
